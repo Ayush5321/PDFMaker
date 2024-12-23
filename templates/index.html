@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Ticket PDF</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h2>Generate Your Ticket PDF</h2>
+    <form action="/generate_pdf" method="POST" enctype="multipart/form-data">
+        <!-- Ticket Screenshot -->
+        <label for="ticket">Upload Ticket Screenshot:</label>
+        <input type="file" name="ticket" id="ticket" accept="image/*" required>
+
+        <!-- ECHS Card -->
+        <label for="card">Upload ECHS Card:</label>
+        <input type="file" name="card" id="card" accept="image/*" required>
+
+        <!-- Theme Selection -->
+        <label for="theme">Select Theme:</label>
+        <select name="theme" id="theme" required>
+            <option value="theme1">Mobile Screenshot</option>
+            <option value="theme2">Desktop Screenshot</option>
+            <!-- Add more themes as needed -->
+        </select>
+
+        <!-- Custom Message -->
+        <label for="message">Enter Custom Message:</label>
+        <textarea name="message" id="message" rows="5" placeholder="Enter your custom details like name, PNR, etc." required></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Generate PDF</button>
+    </form>
+</body>
+</html>
