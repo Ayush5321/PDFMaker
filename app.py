@@ -12,7 +12,7 @@ ALLOWED_EXTENSIONS = {'jpg', 'jpeg', 'png', 'bmp', 'tiff'}
 # Define layout themes
 LAYOUT_THEMES = {
     "theme1": {
-        "ticket": {"x": 10, "y": 20, "w": 90, "h": 150},  # Mobile phone screenshot
+        "ticket": {"x": 10, "y": 20, "w": 90, "h": 190},  # Mobile phone screenshot
         "card": {"x": 110, "y": 20, "w": 80, "h": 60},   # ECHS card at top right
         "message": {"x": 110, "y": 100, "font_size": 12} # Custom message at bottom right
     },
